@@ -1,3 +1,4 @@
+package algebra.euclidianextendedalgorithm;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,8 +7,8 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class Main {
-    static int INPUT_BUFF = (1<<15);
+public class OnceUponATime {
+    static final int INPUT_BUFF = (1 << 15);
     static class InputReader {
         BufferedReader reader;
         StringTokenizer tokenizer;
@@ -18,9 +19,9 @@ public class Main {
 
         String next() {
             while(tokenizer == null || !tokenizer.hasMoreTokens()) {
-                try {
+                try{
                     tokenizer = new StringTokenizer(reader.readLine());
-                } catch (IOException e) {
+                } catch(IOException e) {
                     throw new RuntimeException(e);
                 }
             }
@@ -29,10 +30,6 @@ public class Main {
 
         int nextInt() {
             return Integer.parseInt(next());
-        }
-
-        long nextLong() {
-            return Long.parseLong(next());
         }
     }
 
@@ -69,7 +66,7 @@ public class Main {
         y=-y;
 
         if((k - n) % a1 == 0) {
-            long q = (k-n)/a1, res = 0;
+            long q = (k-n)/a1, res;
             if(q == 0) {
                 res = a*m/a1 + n;
             } else {
